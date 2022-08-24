@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<array>
 #include<vector>
 #include<deque>
@@ -68,9 +68,9 @@ void main()
 	cout << "size:\t" << vec.size() << endl;
 	cout << "MaxSize: " << vec.max_size() << endl;
 	
-	//vec.shrink_to_fit();	//óìåíüøàåò äî ôàêòè÷åñêîãî ðàçìåïà
-	//vec.resize(25);			//ïðèíóäèòåëüíî çàäàåò ðàçìåð âåêòîðà
-	vec.reserve(55);		//çàäàåò âåêòîð è ðàáîòàåò òîëüêî äëÿ óâåëè÷åíèÿ
+	//vec.shrink_to_fit();	//ÑƒÐ¼ÐµÐ½ÑŒÑˆÐ°ÐµÑ‚ Ð´Ð¾ Ñ„Ð°ÐºÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ Ñ€Ð°Ð·Ð¼ÐµÐ¿Ð°
+	//vec.resize(25);			//Ð¿Ñ€Ð¸Ð½ÑƒÐ´Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ Ð·Ð°Ð´Ð°ÐµÑ‚ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð°
+	vec.reserve(55);		//Ð·Ð°Ð´Ð°ÐµÑ‚ Ð²ÐµÐºÑ‚Ð¾Ñ€ Ð¸ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð´Ð»Ñ ÑƒÐ²ÐµÐ»Ð¸Ñ‡ÐµÐ½Ð¸Ñ
 	//vec.assign({ 1024, 2048, 3072, 4096, 5120 });
 	for (int i : vec)cout << i << tab; cout << endl;	
 	cout << "Capacity:" << vec.capacity() << endl;
@@ -79,8 +79,8 @@ void main()
 
 	int index;
 	int value;
-	cout << "Ââåäèòå èíäåêñ äîáàâëÿåìîãî ýëåìåíòà: "; cin >> index;
-	cout << "Ââåäèòå çíà÷åíèå äîáàâëÿåìîãî ýëåìåíòà: "; cin >> value;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ Ð´Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: "; cin >> index;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð´Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: "; cin >> value;
 	//std::vector<int>::iterator position = vec.begin() + index;
 	if (index < vec.size())
 		vec.insert(vec.begin() + index, value);
